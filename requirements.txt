@@ -1,2 +1,2 @@
-bottle==0.12.25
+flask==1.1.1
 requests==2.23.0
