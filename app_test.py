@@ -28,7 +28,7 @@ def test_welcome_page(client):
     response = client.get('/')
     print("RESPONSE", response.data)
     assert response.status_code == 200
-    assert b'Welcome to CS 218!!!' in response.data
+    assert b'CS 218 - HW1' in response.data
 
 def test_get_all_products(client, monkeypatch):
     print("RUNNING 23")
