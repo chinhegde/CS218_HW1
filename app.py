@@ -94,4 +94,8 @@ api.add_resource(SearchProducts, '/api/products/search')
 api.add_resource(SingleProduct, '/api/products/<string:product_id>')
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8080, debug=True)
+    import os
+    if os.environ.get('DOCKER_ENV'):
+        app.run(host="0.0.0.0", port=8080, debug=True)
+    else:
+        app.run(host='localhost', port=8080, debug=True)
