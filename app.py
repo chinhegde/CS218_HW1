@@ -20,7 +20,7 @@ class Welcome(Resource):
         """
 
         if 'text/html' in request.headers.get('Accept', '*/*'):
-            html_response = make_response("<h1>CS 218 - HW1</h1>")
+            html_response = make_response("<h1>CS 218 - HW1</h1> <h2>Submitted by: Chinmayi Lokeshwar Hegde (016145025)</h2>")
             html_response.headers['Content-Type'] = 'text/html'
             return html_response
         else:
